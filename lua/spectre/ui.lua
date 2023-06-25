@@ -119,7 +119,7 @@ function M.render_search_ui()
     end
 
     table.insert(details_ui, { { search_message, state.user_config.highlight.ui } })
-    table.insert(details_ui, { { "Replace: ", state.user_config.highlight.ui } })
+    table.insert(details_ui, { { "-> Replace ", state.user_config.highlight.ui } })
     local path_message = "Path:"
     if state.cwd then
         path_message = path_message .. string.format("   cwd=%s", state.cwd)
