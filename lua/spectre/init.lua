@@ -524,7 +524,7 @@ M.search_handler = function()
         end,
         on_finish = function()
             if not state.is_running then return end
-            state.status_line = string.format("%s matches", total)
+            state.status_line = string.format("%s match%s", total, total > 1 and "es" or "")
 
             api.nvim_buf_set_lines(state.bufnr, c_line, c_line, false, {
                 cfg.line_sep,
