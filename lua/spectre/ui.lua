@@ -131,7 +131,6 @@ function M.render_search_ui()
         utils.write_virtual_text(state.bufnr, config.namespace_ui, c_line, vt_text)
         c_line = c_line + 2
     end
-    M.render_header(state.user_config)
 end
 
 function M.render_header(opts)

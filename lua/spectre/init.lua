@@ -279,7 +279,6 @@ end
 
 M.toggle_live_update = function()
     state.user_config.live_update = not state.user_config.live_update
-    ui.render_header(state.user_config)
 end
 
 M.on_close = function()
@@ -611,7 +610,6 @@ M.change_engine_replace = function(engine_name)
         state.user_config.default.replace.cmd = engine_name
         M.init_regex()
         vim.notify("change replace engine to: " .. engine_name)
-        ui.render_header(state.user_config)
         M.search()
         return
     else
