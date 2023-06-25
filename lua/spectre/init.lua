@@ -127,7 +127,7 @@ M.open = function(opts)
     vim.bo.buftype = 'nofile'
     vim.bo.buflisted = false
     state.bufnr = api.nvim_get_current_buf();
-    vim.cmd(string.format("file spectre"))
+    vim.cmd(string.format("file Spectre"))
     vim.bo.filetype = config.filetype
     api.nvim_buf_clear_namespace(state.bufnr, config.namespace_status, 0, -1)
     api.nvim_buf_clear_namespace(state.bufnr, config.namespace_result, 0, -1)
