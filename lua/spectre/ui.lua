@@ -110,7 +110,7 @@ end
 function M.render_search_ui()
     api.nvim_buf_clear_namespace(state.bufnr, config.namespace_ui, 0, config.lnum_UI)
     local details_ui = {}
-    local search_message = "Search:          "
+    local search_message = "-> Search          "
     local cfg = state_utils.get_search_engine_config()
     for key, value in pairs(state.options) do
         if value == true and cfg.options[key] then
