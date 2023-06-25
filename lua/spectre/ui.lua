@@ -82,7 +82,7 @@ M.render_filename = function(bufnr, namespace, line, entry)
         state.user_config.color_devicons, '+')
 
     api.nvim_buf_set_lines(state.bufnr, line, line, false, {
-        string.format("%s %s%s:%s:%s:", icon, directory, filename, entry.lnum, entry.col),
+        string.format("%s %s%s", icon, directory, filename),
     })
 
     local width = vim.api.nvim_strwidth(filename)
