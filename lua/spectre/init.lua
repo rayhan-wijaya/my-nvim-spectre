@@ -453,7 +453,6 @@ end
 M.search_handler = function()
     local c_line = 0
     local total = 0
-    local start_time = 0
     local padding = #state.user_config.result_padding
     local cfg = state.user_config or {}
     local last_filename = ''
@@ -464,7 +463,6 @@ M.search_handler = function()
             state.status_line = "Start search"
             c_line = config.line_result
             total = 0
-            start_time = vim.loop.hrtime()
         end,
         on_result = function(item)
             if not state.is_running then return end
@@ -526,8 +524,7 @@ M.search_handler = function()
         end,
         on_finish = function()
             if not state.is_running then return end
-            local end_time = (vim.loop.hrtime() - start_time) / 1E9
-            state.status_line = string.format("Total: %s match, time: %ss", total, end_time)
+            state.status_line = string.format("Total: %s match", total)
 
             api.nvim_buf_set_lines(state.bufnr, c_line, c_line, false, {
                 cfg.line_sep,
