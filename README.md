@@ -1,3 +1,3 @@
 # my-nvim-spectre
 
-i just removed the header
+a fork of nvim-spectre that has a more minimal interface
