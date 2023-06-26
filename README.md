@@ -1,3 +1,3 @@
-# nvim-spectre
+# my-nvim-spectre
 
 i just removed the header
